@@ -28,6 +28,7 @@ x-environment:
   # Telemetry settings
   ENABLE_TELEMETRY: "${ENABLE_TELEMETRY}"
   # ...your customizations go here
+  PUBLIC_REGISTER_ENABLED: "True"
 
 x-volumes:
   &default-back-volumes
@@ -102,6 +103,7 @@ services:
       TAIGA_URL: "${TAIGA_SCHEME}://${TAIGA_DOMAIN}"
       TAIGA_WEBSOCKETS_URL: "${WEBSOCKETS_SCHEME}://${TAIGA_DOMAIN}"
       TAIGA_SUBPATH: "${SUBPATH}"
+      PUBLIC_REGISTER_ENABLED: "true"
       # ...your customizations go here
     networks:
       - taiga
